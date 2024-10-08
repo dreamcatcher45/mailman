@@ -1,0 +1,78 @@
+{
+  "name": "mailman",
+  "displayName": "MailMan",
+  "description": "Access and view emails from MailHog server",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "mailmanSidebar",
+          "name": "MailMan"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+    {
+        "id": "mailman-sidebar",
+        "title": "MailMan",
+        "icon": "$(mail)"
+    }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "mailmanSidebar",
+        "contents": "No emails found. Make sure MailHog server is running.\n[Refresh Emails](command:mailman.refreshEmails)"
+      }
+    ],
+    "commands": [
+      {
+        "command": "mailman.refreshEmails",
+        "title": "Refresh Emails",
+        "icon": "$(refresh)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "mailman.refreshEmails",
+          "when": "view == mailmanSidebar",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.94.0",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.11.1",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.7"
+  },
+  "aiKey": null
+}
