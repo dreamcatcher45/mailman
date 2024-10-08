@@ -27,6 +27,8 @@ This extension is not affiliated with or endorsed by the official MailHog projec
 - Click the refresh button to load emails from the MailHog server.
 - Click on an email to open and view its content.
 
+  ![Demo](https://raw.githubusercontent.com/dreamcatcher45/mailman/refs/heads/main/media/demo.png)
+
 ## Requirements
 
 - MailHog server running locally at `http://localhost:8025`.
