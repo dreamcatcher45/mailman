@@ -4,10 +4,10 @@
   "description": "Access and view emails from MailHog server",
   "version": "0.0.1",
   "publisher": "dreamcatcher45",
-  "homepage": "",
+  "homepage": "https://github.com/dreamcatcher45/mailman",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/dreamcatcher45/mailman"
   },
   "icon": "media/icon.png",
   "tags": ["mailman","mail","smtp","mailhog","email"],
