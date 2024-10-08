@@ -3,6 +3,14 @@
   "displayName": "MailMan",
   "description": "Access and view emails from MailHog server",
   "version": "0.0.1",
+  "publisher": "dreamcatcher45",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "icon": "media/icon.png",
+  "tags": ["mailman","mail","smtp","mailhog","email"],
   "engines": {
     "vscode": "^1.94.0"
   },

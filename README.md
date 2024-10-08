@@ -1,71 +1,48 @@
-# mailman README
+# MailMan - VSCode Email Viewer Extension
 
-This is the README for your extension "mailman". After writing up a brief description, we recommend including the following sections.
+**MailMan** is a Visual Studio Code extension that allows you to view emails from a MailHog server directly within the editor. It provides a tree view of your emails and allows you to view the full content of each email in a webview.
+
+This extension is not affiliated with or endorsed by the official MailHog project. It is an independent tool designed to work with the MailHog server for email viewing.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Fetch emails from a MailHog server.
+- View email content with HTML formatting.
+- Support for `quoted-printable` encoded emails.
+- Easily refresh emails from the sidebar.
+- Display basic email metadata such as sender, recipient, subject, and date.
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Install the extension from the Visual Studio Marketplace or manually from the `.vsix` file.
+2. Ensure that [MailHog](https://github.com/mailhog/MailHog) is running locally on `http://localhost:8025`.
+3. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS) and search for `MailMan`.
+4. Use the available commands:
+   - **MailMan: Refresh Emails** - Refreshes the list of emails from MailHog.
+   - **MailMan: View Email** - Opens the selected email in a webview.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Usage
+
+- After installation, a new **MailMan** view will be available in the sidebar.
+- Click the refresh button to load emails from the MailHog server.
+- Click on an email to open and view its content.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- MailHog server running locally at `http://localhost:8025`.
 
-## Extension Settings
+## Extension Commands
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+| Command                    | Description                    |
+|----------------------------|--------------------------------|
+| `mailman.refreshEmails`     | Refreshes the email list       |
+| `mailman.viewEmail`         | Opens an email in a webview    |
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Email body formatting may vary depending on the content type of the email.
+- Currently supports fetching emails only from a local MailHog instance.
 
-## Release Notes
+## License
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This extension is licensed under the [MIT License](LICENSE).
